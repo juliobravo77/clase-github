@@ -1,0 +1,134 @@
+/*reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos generales*/
+
+body{
+    background-color: #eceef3;
+    font-family: 'Roboto',sans-serif;
+}
+
+/*estilos del header*/
+
+header{
+    display: none;
+}
+
+/*estilos de main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+main p{
+    font-size: 1em;
+    
+}
+
+main h2 span{
+    display: block;
+}
+
+main .boton{
+    background-color: #51b0df;
+    margin-top: 1rem;
+    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+    color: whitesmoke;
+    box-shadow: 1px 2px black;
+}
+
+main img{
+    width: 60%;
+    
+}
+
+/*estilos de section*/
+section{
+    display: none;
+}
+
+footer h4{
+    text-align: center;
+}
+
+/*pantallas de tablet*/
+
+@media screen and (min-width:600px){
+    /*estilos de header*/
+    header{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 0.7rem;
+        align-items: center;
+    }
+
+    header nav ul{
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+    
+    header nav ul li{
+        font-weight: bold;
+    }
+
+    /*estilos de main*/
+    section{
+        display: block;
+        display: flex;
+        background-color: #51b0df;
+        padding: 1rem;
+    }
+    section div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    section div img{
+        width: 20px;
+    }
+}
+@media screen and(min-width:1024px){
+    /*estilos de main*/
+    main{
+        width: 1000px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "p img"
+        "h2 img"
+        "p-dos img"
+        "boton img";
+        justify-content: center;
+        justify-items: center;
+    }
+
+    main h2{
+        grid-area: h2;
+    }
+    main img{
+        grid-area: img;
+    }
+    main p{
+        grid-area: p;
+    }
+    main p-dos{
+        grid-area: p-dos;
+    }
+
+}
+
+
